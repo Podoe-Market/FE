@@ -24,38 +24,9 @@ a {
   font-family: 'Black Han Sans';
 }
 
-/*작품 구경하기*/
-.search_script {
-  font-size: 30px;
-}
-.search_script img {
-  width: 30px;
-}
-
-/*지금 공연 중*/
-.now_playing {
-  font-size: 30px;
-  padding-left: 0;
-}
-.now_playing img {
-  width: 30px;
-}
-
-/*작품 등록하기*/
-.regist_script {
-  font-size: 30px;
-  padding-left: 0;
-}
-.regist_script img {
-  width: 30px;
-}
-
-/*로그인/회원가입*/
-.sign_inup {
-  font-size: 30px;
-}
-.sign_inup img {
-  width: 30px;
+.nav_logo a {
+  color: #490076;
+  font-size: 50px;
 }
 
 .Intro {
@@ -69,4 +40,11 @@ a {
 .title {
   color: #490076;
   font-size: 60px;
+}
+
+/* 반응형 웹 */
+@media screen and (max-width: 768px) {
+  .NavMenu {
+    flex-direction: column;
+  }
 }
