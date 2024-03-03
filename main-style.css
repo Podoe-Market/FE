@@ -4,9 +4,11 @@
   font-style: normal;
 }
 
+html,
 body {
+  height: 100%;
   margin: 0;
-  background-color: #fde0ff;
+  background: linear-gradient(#fde0ff, white);
 }
 
 a {
@@ -29,22 +31,78 @@ a {
   font-size: 50px;
 }
 
+.nav_menu {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+.nav_menu li {
+  padding: 8px 12px;
+}
+.nav_menu li:hover {
+  background-color: white;
+  border-radius: 4px;
+}
+
+/*플랫폼 설명*/
 .Intro {
   text-align: center;
   padding-top: 30px;
   font-family: 'Black Han Sans';
 }
 .describe {
-  font-size: 20px;
+  font-size: 35px;
 }
-.title {
+
+/*잘 익은 대본*/
+.top3_title {
   color: #490076;
-  font-size: 60px;
+  text-align: center;
+  padding-top: 30px;
+  font-family: 'Black Han Sans';
+  font-size: 40px;
+  padding-bottom: 0px;
+  margin-bottom: -60px;
+}
+.top3_img {
+  text-align: center;
+}
+.top3_img img {
+  width: 20%;
+}
+
+/* 햄버거 버튼 */
+.nav_togglebtn {
+  display: none;
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
 }
 
 /* 반응형 웹 */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 650px) {
   .NavMenu {
     flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 12px;
+  }
+
+  .nav_menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .nav_menu li {
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav_togglebtn {
+    display: block;
+  }
+
+  .nav_menu.active {
+    display: flex;
   }
 }
